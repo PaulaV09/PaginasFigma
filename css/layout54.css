@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100vh;
+  background: url("../images/layout54/background.png") no-repeat center center;
+  background-size: cover;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 425px;
+  height: 703px;
+  margin: auto;
+  margin-left: 80px;
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.content {
+  width: 425px;
+  height: 603px;
+  border-radius: 30px;
+  border: 1px solid #12141b;
+  margin-top: -50px;
+  padding: 40px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.content .lorem {
+  font-family: "Helvetica", sans-serif;
+  font-weight: lighter;
+  font-size: 22px;
+  color: #12141b;
+  text-align: left;
+  line-height: 32px;
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 30px 60px;
+  max-width: 500px;
+  padding-top: 30px;
+}
+
+.number-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.num {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 32px;
+  color: #12141b;
+  margin: 0 0 6px 0;
+}
+
+.lorem {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 150;
+  font-size: 16px;
+  line-height: 24px;
+  color: #12141b;
+  margin: 0;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #0c0c0c;
+  padding-top: 80px;
+  padding-left: 80px;
+  max-width: 783px;
+}
+
+.title {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 48px;
+  margin: 0 100px 20px 0;
+  color: #0c0c0c;
+}
+
+.description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  margin: 20px 0 40px 0;
+  line-height: 1.4;
+}
+
+.btn {
+  width: 160px;
+  height: 50px;
+  border: none;
+  border-radius: 40px;
+  background-color: #0c0c0c;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #333;
+}
