@@ -1,0 +1,91 @@
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.25fr 1fr;
+    gap: 15px;
+    margin: auto;
+    margin-bottom: 32px;
+    margin-top: 70px;
+    width: fit-content;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 32px;
+}
+.item h1{
+    font-family: Avenir, sans-serif;
+    font-size: 56px;
+    color: #252525;
+}
+.item h2{
+    font-family: Avenir, sans-serif;
+    font-size: 40px;
+    color: #252525;
+    opacity: 25%;
+}
+.item p{
+    font-family: Avenir, sans-serif;
+    font-size: 26px;
+    color: #252525;
+    opacity: 80%;
+}
+.item button{
+    background-color: #252525;
+    color: white;
+    font-family: Avenir, sans-serif;
+    font-size: 18px;
+    max-width: 159px;
+    max-height: 52px;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+
+}
+
+.sup {
+    display: flex;
+    height: 100%;
+    gap: 18px;
+
+}
+.sup :nth-child(1) {
+    align-self: center;
+}
+
+.sup :nth-child(2) {
+    align-self: flex-start;
+}
+.sup :nth-child(3) {
+    align-self: flex-end;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    max-width: 408px;
+    max-height: 480px;
+}
+
+.img1 {
+    width: 100%;
+    height: 100%;
+    max-width: 408px;
+    max-height: 480px;
+}
+
+.inf{
+    gap: 18px;
+}
+
+.img2 {
+    width: 100%;
+    height: 100%;
+    max-width: 412px;
+    max-height: 381px;
+    
+}
+
+
+.inf {
+    display: flex;
+}
