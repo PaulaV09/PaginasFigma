@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: "Helvetica", sans-serif;
+  color: #12141b;
+  background: #fff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  gap: 30px;
+  height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  padding-left: 80px;
+}
+
+.left-column .icon {
+  width: 100px;
+  margin-bottom: 20px;
+  z-index: 2;
+  align-self: flex-end;
+}
+
+.title {
+  font-family: "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 1.2;
+  margin: 0;
+  z-index: 1;
+  margin-top: -150px;
+}
+
+.computer {
+  width: 100%;
+  border-radius: 12px;
+  width: 375px;
+  height: 279px;
+}
+
+.left-column p {
+  font-family: "Helvetica", sans-serif;
+  font-weight: lighter;
+  font-size: 22px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.right-column {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carrusel {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+}
+
+.carrusel::-webkit-scrollbar {
+  display: none;
+}
+
+.carrusel-item {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sub-title {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 100;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  margin: 0;
+}
+
+.phone {
+  width: 420px;
+  height: 620px;
+  border-radius: 12px;
+}
+
+.num-text {
+  display: flex;
+  align-items: flex-start; 
+  gap: 15px; 
+  margin-top: 15px;
+}
+
+.num {
+  font-family: "Times New Roman", serif;
+  font-size: 64px;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  color: #aaa;
+  flex-shrink: 0;
+}
+
+.carrusel-item .lorem {
+  font-family: "Helvetica", sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .left-column {
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .carrusel {
+    gap: 20px;
+  }
+
+  .carrusel-item {
+    flex: 0 0 260px;
+  }
+}
