@@ -56,10 +56,10 @@
     margin: auto;
     margin-bottom: 32px;
     margin-top: 70px;
-
     width: fit-content;
     align-items: center;
     justify-items: center;
+    padding-bottom: 32px;
 }
 
 .fotos img {
@@ -69,4 +69,5 @@
     height: 100%;
     object-fit: cover;
     border-radius: 16px;
+    
 }
