@@ -5,7 +5,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1.5fr;
   height: 100vh;
   background: url("../images/layout54/background.png") no-repeat center center;
   background-size: cover;
@@ -40,9 +40,9 @@ body {
   width: 100%;
   border-radius: 20px;
   border: 1px solid #12141b;
-  margin-top: -40px;
-  padding: 20px;
-  padding-top: 80px;
+  margin-top: -60px;
+  padding: 40px;
+  padding-top: 100px;
   box-sizing: border-box;
   text-align: center;
   font-size: clamp(16px, 2vw, 18px);
@@ -98,11 +98,12 @@ body {
   grid-area: right;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   color: #0c0c0c;
   padding: 40px;
   max-width: 700px;
+  margin-top:100px;
 }
 
 .title {
