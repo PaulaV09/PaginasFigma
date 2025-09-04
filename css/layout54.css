@@ -9,48 +9,45 @@ body {
   height: 100vh;
   background: url("../images/layout54/background.png") no-repeat center center;
   background-size: cover;
+  padding: 20px;
+  box-sizing: border-box;
+  grid-template-areas: "left right";
 }
 
 .left-column {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  grid-area: left;
 }
 
 .card {
-  width: 425px;
-  height: 703px;
+  width: clamp(280px, 80%, 425px);
   margin: auto;
-  margin-left: 80px;
+  text-align: center;
 }
 
 .card img {
-  width: 120px;
-  height: 120px;
-  margin-top: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
   position: relative;
   z-index: 3;
 }
 
 .content {
-  width: 425px;
-  height: 603px;
-  border-radius: 30px;
+  width: 100%;
+  border-radius: 20px;
   border: 1px solid #12141b;
-  margin-top: -50px;
-  padding: 40px;
-  padding-top: 100px;
+  margin-top: -40px;
+  padding: 20px;
+  padding-top: 80px;
   box-sizing: border-box;
   text-align: center;
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 18px);
   line-height: 1.6;
   color: #333;
-  position: relative;
-  z-index: 1;
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.2) 0%,
@@ -58,89 +55,127 @@ body {
   );
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  min-width: 320px;
 }
 
 .content .lorem {
   font-family: "Helvetica", sans-serif;
   font-weight: lighter;
-  font-size: 22px;
+  font-size: clamp(18px, 2.5vw, 22px);
   color: #12141b;
   text-align: left;
-  line-height: 32px;
+  line-height: 1.5;
 }
 
 .numbers-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 30px 60px;
-  max-width: 500px;
-  padding-top: 30px;
+  gap: 20px 40px;
+  padding-top: 20px;
 }
 
 .number-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   text-align: left;
 }
 
 .num {
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  font-size: 32px;
+  font-size: clamp(24px, 3vw, 32px);
   color: #12141b;
   margin: 0 0 6px 0;
 }
 
 .lorem {
   font-family: "Helvetica", sans-serif;
-  font-weight: 150;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.5;
   color: #12141b;
   margin: 0;
 }
 
 .right-column {
+  grid-area: right;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   color: #0c0c0c;
-  padding-top: 80px;
-  padding-left: 80px;
-  max-width: 783px;
+  padding: 40px;
+  max-width: 700px;
 }
 
 .title {
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  font-size: 48px;
-  margin: 0 100px 20px 0;
+  font-size: clamp(28px, 5vw, 48px);
+  margin: 0 0 20px 0;
   color: #0c0c0c;
 }
 
 .description {
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 24px;
+  font-size: clamp(16px, 2.5vw, 24px);
   margin: 20px 0 40px 0;
   line-height: 1.4;
 }
 
 .btn {
-  width: 160px;
-  height: 50px;
+  width: clamp(120px, 30%, 160px);
+  height: clamp(40px, 10vw, 50px);
   border: none;
   border-radius: 40px;
   background-color: #0c0c0c;
   color: #fff;
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
   background-color: #333;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "right"
+      "left";
+    height: auto;
+  }
+
+  .right-column {
+    padding: 20px;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content {
+    min-width: 100%;
+  }
+
+  .title,
+  .description {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .numbers-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .content {
+    padding: 20px;
+    padding-top: 60px;
+  }
 }
