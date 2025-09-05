@@ -48,7 +48,6 @@ body {
   border-radius: 4px;
 }
 
-/* ====== TEXTO Y BOTÓN ====== */
 .lorem {
   font-size: 20px;
   line-height: 1.6;
@@ -74,7 +73,6 @@ body {
   background-color: #333;
 }
 
-/* ====== COLUMNA DERECHA ====== */
 .right-column {
   display: flex;
   flex-direction: column;
@@ -82,11 +80,10 @@ body {
   gap: 50px;
 }
 
-/* ====== CARD ====== */
 .card {
   position: relative;
   width: 100%;
-  max-width: 640px; /* no se estira más que las imágenes de abajo */
+  max-width: 640px; 
   margin: 320px auto 0;
   text-align: center;
 }
@@ -130,7 +127,6 @@ body {
   line-height: 1.4;
 }
 
-/* ====== IMÁGENES DERECHA ====== */
 .images {
   display: flex;
   gap: 40px;
@@ -167,20 +163,17 @@ body {
     -webkit-text-stroke: 1px #0c0c0c;
   }
 
-  /* Imagen principal */
   .img {
     max-width: 100%;
     height: auto;
   }
 
-  /* Texto lorem */
   .lorem {
     font-size: 18px;
     text-align: center;
     margin: 20px auto;
   }
 
-  /* Botón centrado */
   .sign-up {
     align-self: center;
     width: 160px;
@@ -188,7 +181,6 @@ body {
     font-size: 16px;
   }
 
-  /* Card debajo del botón */
   .card {
     margin: 90px auto 0;
   }
@@ -204,7 +196,6 @@ body {
     margin-bottom: 20px;
   }
 
-  /* Imágenes de abajo apiladas */
   .images {
     flex-direction: column;
     align-items: center;
