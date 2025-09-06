@@ -10,8 +10,8 @@ body {
   grid-template-columns: 1fr 1.7fr;
   gap: 30px;
   height: 100vh;
-  box-sizing: border-box;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .left-column {
@@ -19,40 +19,37 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 30px;
-  padding: 60px;
-  padding-left: 80px;
+  padding: 60px 80px;
 }
 
 .left-column .icon {
   width: 100px;
   margin-bottom: 20px;
-  z-index: 2;
   align-self: flex-end;
 }
 
 .title {
   font-family: "Times New Roman", serif;
   font-weight: normal;
-  font-size: 80px;
+  font-size: clamp(36px, 6vw, 80px);
   line-height: 1.2;
   margin: 0;
-  z-index: 1;
   margin-top: -150px;
+  max-width: 447px;
 }
 
 .computer {
   width: 100%;
+  max-width: 375px;
+  height: auto;
   border-radius: 12px;
-  width: 375px;
-  height: 279px;
 }
 
 .left-column p {
-  font-family: "Helvetica", sans-serif;
-  font-weight: lighter;
-  font-size: 22px;
+  font-size: clamp(16px, 2vw, 22px);
   line-height: 1.6;
   margin: 0;
+  max-width: 400px;
 }
 
 .right-column {
@@ -64,14 +61,10 @@ body {
 .carrusel {
   display: flex;
   gap: 40px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  overflow: visible;
+  scroll-snap-type: none; 
+  animation: scroll 30s linear infinite;
   padding-bottom: 20px;
-}
-
-.carrusel::-webkit-scrollbar {
-  display: none;
 }
 
 .carrusel-item {
@@ -82,31 +75,40 @@ body {
   gap: 15px;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+
 .sub-title {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 100;
+  font-family: "Times New Roman", serif;
   font-size: 24px;
   font-weight: bold;
-  color: #333333;
   margin: 0;
+  color: #333;
 }
 
 .phone {
-  width: 420px;
-  height: 620px;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
   border-radius: 12px;
 }
 
 .num-text {
   display: flex;
-  align-items: flex-start; 
-  gap: 15px; 
+  align-items: flex-start;
+  gap: 15px;
   margin-top: 15px;
 }
 
 .num {
   font-family: "Times New Roman", serif;
-  font-size: 64px;
+  font-size: clamp(28px, 5vw, 64px);
   font-weight: bold;
   margin: 10px 0 0 0;
   color: #aaa;
@@ -114,14 +116,12 @@ body {
 }
 
 .carrusel-item .lorem {
-  font-family: "Helvetica", sans-serif;
-  font-weight: lighter;
-  font-size: 20px;
+  font-size: clamp(14px, 2vw, 20px);
   line-height: 1.5;
   margin: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .container {
     grid-template-columns: 1fr;
     height: auto;
@@ -130,17 +130,53 @@ body {
   .left-column {
     align-items: center;
     text-align: center;
+    padding: 40px 20px;
+  }
+
+  .left-column .icon {
+    align-self: center;
+  }
+
+  .right-column{
+    justify-content: center;
   }
 
   .title {
-    font-size: 36px;
+    margin-top: 0;
   }
 
   .carrusel {
     gap: 20px;
+    justify-content: center;
   }
 
   .carrusel-item {
-    flex: 0 0 260px;
+    flex: 0 0 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .computer {
+    max-width: 280px;
+  }
+
+  .phone {
+    max-width: 260px;
+  }
+
+  .carrusel {
+    gap: 15px;
+  }
+
+  .carrusel-item {
+    flex: 0 0 240px;
+  }
+
+  .num {
+    font-size: clamp(22px, 6vw, 32px);
   }
 }
