@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(to right, #f8d696 0%, #eabf61 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+}
+
+.background-img {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 10%;
+  width: 45%;
+  height: auto;
+}
+
+.content {
+  margin: 15%;
+  z-index: 2;
+  max-width: 35%;
+}
+
+.circle {
+  width: 15%;
+}
+
+.title {
+  font-family: "Bitter", serif;
+  font-size: 64px;
+  font-weight: bolder;
+}
+
+.lorem {
+  font-family: "Space Mono", monospace;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 75%;
+}
+
+.btn {
+  font-family: "Space Mono", monospace;
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  background-color: #181818;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+@media (min-width: 1400px) {
+  .title {
+    font-size: 80px;
+  }
+
+  .lorem {
+    font-size: 22px;
+    max-width: 65%;
+  }
+
+  .content {
+    margin: 12%;
+    max-width: 30%;
+  }
+
+  .background-img {
+    width: 40%;
+    right: 8%;
+  }
+
+  .circle {
+    width: 12%;
+  }
+}
+
+@media (max-width: 1068px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .content {
+    margin: 40px auto;
+    max-width: 70%;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .lorem {
+    font-size: 18px;
+    max-width: 90%;
+    margin: 20px auto;
+  }
+
+  .background-img {
+    position: relative;
+    width: 60%;
+    max-width: 400px;
+    right: auto;
+    margin-top: 20px;
+  }
+
+  .circle {
+    width: 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .lorem {
+    font-size: 16px;
+    max-width: 100%;
+    margin: 16px 0;
+  }
+
+  .content {
+    margin: 20px;
+    max-width: 100%;
+  }
+
+  .background-img {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .circle {
+    width: 25%;
+  }
+
+  .btn {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
