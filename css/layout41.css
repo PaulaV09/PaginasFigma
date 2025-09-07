@@ -1,0 +1,117 @@
+.container{
+    padding-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-right: 7%;
+    padding-left: 7%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -15%;
+    margin-right: 10%;
+    margin-left: 20%;
+    
+    
+}
+.content h1{
+    font-family: Lato, sans-serif;
+    font-size: 56px;
+    color: #333333;
+    font-weight: bold;
+    
+    
+}
+.content p{
+    font-family: Lato, sans-serif;
+    font-size: 24px;
+    color: #333333;
+    opacity: 100%;
+}
+.content button {
+    font-family: Lato, sans-serif;
+    font-size: 22px;
+    color: white;
+    background-color: #333333;
+    width: 225px;
+    height: 66px;
+    border: none;
+    box-sizing: border-box;   
+    line-height: 66px;     
+    text-align: center;  
+    border-radius: 16px;   
+}
+.card{
+    padding-top: 15%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    justify-content: flex-start;
+    width: 100%;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5%;
+    
+    box-sizing: content-box;
+    
+
+}
+.left{
+    background-color: #C6D9E1;
+    border-radius: 16px;
+    padding:2%;
+    
+}
+.right{
+    background-color: #F4F4F4;
+    border-radius: 16px;
+    padding:2%;
+    
+}
+.card h2{
+    font-family: Lato, sans-serif;
+    font-size: 25px;
+    color: #333333;
+    opacity: 100%;
+}
+.card p{
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    opacity: 100%;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+.bottom img{
+    width: 100%;
+    height: 100%;
+    max-width: 188px;
+    max-height: 113px;
+}
+.photo{
+    position: relative;
+}
+.splash{
+    position: absolute;
+    width: 725px;
+    height: 822px;
+}
+.logo{
+    position: absolute;
+    width: 165px;
+    height: 165px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
