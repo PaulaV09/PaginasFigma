@@ -1,94 +1,211 @@
-
 body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #fdfbfb, #ebedee, #fceabb, #f8b500);
-  color: #222;
+  font-family: "Inter", sans-serif;
+  color: #111;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+body::before {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  left: -100px;
+  background: #a5d8ff;
+}
+
+body::after {
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  right: -150px;
+  background: #ffd6e0;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.blob-3 {
+  width: 350px;
+  height: 350px;
+  top: 50%;
+  left: 150px;
+  background: #a5d8ff;
+}
+
+.blob-4 {
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  right: 100px;
+  background: #ffd6e0;
+}
+
 header {
-  padding: 2rem 1rem;
-  background: linear-gradient(90deg, #4a90e2, #50c9c3);
-  width: 100%;
-  color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
+  padding: 4rem 1rem 3rem;
+  max-width: 800px;
 }
+
 header h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: .5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
   margin: 0;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #0071e3, #5ac8fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 header p {
-  color: #f0f0f0;
-  margin: 0.25rem 0 0;
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 300;
+  color: #444;
 }
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.5rem;
   width: 90%;
-  max-width: 900px;
-  padding: 2rem 0;
+  max-width: 1000px;
+  padding: 2rem 0 4rem;
 }
-a.card {
+
+.card {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  background: #fefefe;
-  background: linear-gradient(145deg, #ffffff, #f6f9fc);
-  border: 1px solid #e6e6e6;
-  border-radius: 12px;
+  aspect-ratio: 1 / 1;
+  background: #fff;
+  border-radius: 20px;
   text-decoration: none;
-  color: #222;
-  font-weight: 500;
+  color: #111;
   font-size: 1.1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: all 0.2s ease-in-out;
-}
-a.card:hover {
-  background: linear-gradient(145deg, #e3f2fd, #fce4ec);
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  color: #4a90e2;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(145deg, #e3f2fd, #fce4ec);
+  color: #0071e3;
+}
+
+@media (min-width: 1400px) {
+  header {
+    padding: 6rem 2rem 4rem;
+    max-width: 1000px;
+  }
+
   header h1 {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
   }
+
+  header p {
+    font-size: 1.4rem;
+  }
+
+  .blob-3 {
+    width: 450px;
+    height: 450px;
+    left: 200px;
+  }
+
+  .blob-4 {
+    width: 400px;
+    height: 400px;
+    right: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 3rem 1rem 2rem;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.2rem;
   }
-  a.card {
-    height: 80px;
+
+  .blob-3 {
+    width: 250px;
+    height: 250px;
+    left: 50px;
+  }
+
+  .blob-4 {
+    width: 220px;
+    height: 220px;
+    right: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 2rem 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
     font-size: 1rem;
   }
-}
 
-@media (max-width: 480px) {
-  header {
-    padding: 1.5rem 1rem;
-  }
-  header h1 {
-    font-size: 1.25rem;
-  }
-  header p {
-    font-size: 0.9rem;
-  }
   .grid {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
-  a.card {
-    height: 70px;
+
+  .card {
     font-size: 0.95rem;
+    border-radius: 12px;
+  }
+
+  .blob-3 {
+    width: 180px;
+    height: 180px;
+    top: 60%;
+    left: -50px;
+  }
+
+  .blob-4 {
+    width: 160px;
+    height: 160px;
+    top: 10%;
+    right: -50px;
   }
 }
