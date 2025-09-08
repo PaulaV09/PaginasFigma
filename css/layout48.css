@@ -1,0 +1,163 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #FAD13A, rgba(250, 209, 58, 0) 70%), url('../images/layout48/unsplash_muOHbrFGEQY.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.top h1{
+    font-family: Lato, sans-serif;
+    color: #1D1E23;
+    font-size: 112px;
+}
+.top h2{
+    font-family: Lato, sans-serif;
+    color: #1D1E23;
+    font-size: 72px;
+    font-weight: bold;
+}
+.top span{
+    font-family: Lato, sans-serif;
+    color: #1D1E23;
+    font-size: 72px;
+    font-weight: lighter;
+}
+.digital {
+    background-image: url('../images/layout48/Rectangle 79.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-between;
+    gap: 40px;
+}
+.photo{
+    padding-top: 20%;
+    width: 194px;
+    height: auto;
+    
+}
+.magne{
+    position: relative;
+}
+.mg1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.mg2{
+    position: absolute;
+    top: 15px;
+    left: 0px;
+}
+.mg3{
+    position: absolute;
+    top: 30px;
+    left: 0px;
+}
+.middle button{
+    background-color: #1D1E23;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 32px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-top: 0;
+    
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    align-items: center;
+    width: 100%;
+    
+}
+.middle button{
+    background-color: #1D1E23;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    font-size: 32px;
+    border-radius: 32px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.card1 {
+    background-image: url('../images/layout48/Rectangle 79.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: auto;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    margin-top: 5%;
+    
+
+    
+    box-sizing: border-box;
+    
+}
+.cardd{
+    display: flex;
+    gap: 50%;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.card h1{
+    font-family: Lato, sans-serif;
+    color: #1D1E23;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+.bottom{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 50px;
+    bottom: 10%;
+    left: -15%;
+    
+}
