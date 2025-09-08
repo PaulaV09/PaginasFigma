@@ -55,16 +55,16 @@ body {
 .right-column {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: end;     
-  gap: 20px;               
+  justify-content: center;
+  align-items: end;
+  gap: 20px;
   height: 100%;
 }
 
 .card {
   display: grid;
-  grid-template-columns: 60px 250px; 
-  grid-template-rows: 220px auto;  
+  grid-template-columns: 60px 250px;
+  grid-template-rows: 220px auto;
   gap: 12px 20px;
   align-items: start;
   margin-right: 130px;
@@ -72,12 +72,12 @@ body {
 
 .number {
   grid-row: 1 / span 2;
-  font-family: 'PT Serif', serif;
+  font-family: "PT Serif", serif;
   font-weight: bold;
   font-size: 28px;
-  color: #E9E9E9;
+  color: #e9e9e9;
   display: flex;
-  align-items: flex-start; 
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -89,12 +89,204 @@ body {
 }
 
 .text p {
-  font-family: 'Proxima Nova', sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   font-size: 16px;
-  color: #E9E9E9;
+  color: #e9e9e9;
   margin: 0;
   line-height: 1.4;
 }
 
+/* ===================
+   BASE STYLES
+=================== */
+body {
+  margin: 0;
+  font-family: "Proxima Nova", sans-serif;
+}
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  background: url("../images/Layout55/img3.png") no-repeat center center;
+  background-size: cover;
+}
 
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 250px 0 80px;
+  color: #0c0c0c;
+}
+
+.title {
+  font-family: "PT Serif", serif;
+  font-size: 80px;
+  margin: 0 0 20px 0;
+  color: #0c0c0c;
+}
+
+.description {
+  font-size: 24px;
+  margin: 0 0 40px 0;
+  max-width: 500px;
+  line-height: 1.4;
+}
+
+.btn {
+  width: 220px;
+  height: 66px;
+  border: none;
+  border-radius: 40px;
+  background-color: #0c0c0c;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  height: 100%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 60px 250px;
+  grid-template-rows: 220px auto;
+  gap: 12px 20px;
+  align-items: start;
+  margin-right: 130px;
+}
+
+.number {
+  grid-row: 1 / span 2;
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: #e9e9e9;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.image img {
+  width: 250px;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.text p {
+  font-size: 16px;
+  color: #e9e9e9;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    padding: 0 80px;
+  }
+
+  .title {
+    font-size: 96px;
+  }
+
+  .description {
+    font-size: 28px;
+  }
+
+  .btn {
+    font-size: 24px;
+    width: 240px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    height: auto;
+    padding: 40px 0;
+    background-image: unset;
+  }
+
+  .left-column {
+    align-items: center;
+    padding: 0 20px;
+    background-color: #fff;
+  }
+
+  .title {
+    font-size: 60px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .right-column {
+    align-items: center;
+    margin-top: 40px;
+    background-color: #0c0c0c;
+  }
+
+  .card {
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .left-column{
+    align-items: center;
+    padding: 0;
+    margin-left: 20px;
+  }
+  .title {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .btn {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    margin: 0;
+    text-align: center;
+  }
+
+  .number {
+    grid-row: auto;
+    font-size: 24px;
+    justify-content: center;
+  }
+
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+}
