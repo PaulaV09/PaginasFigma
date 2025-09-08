@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+.big-container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  z-index: 1;
+  height: 80%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.shape {
+  position: absolute;
+  z-index: 2;
+  right: 3%;
+  top: 0;
+  height: 70%;
+  width: 33%;
+}
+
+.circle {
+  position: absolute;
+  z-index: 3;
+  top: 15%;
+  left: 35%;
+  width: 8%;
+}
+
+.muneco {
+  position: absolute;
+  z-index: 4;
+  right: 3%;
+  bottom: 6%;
+  height: 80%;
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+  padding: 60px;
+  max-width: 1200px;
+}
+
+.first-row {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 6rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.lorem {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+
+.btn {
+  background: #ff6600;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #e65c00;
+}
+
+.second-row {
+  margin-top: 100px;
+}
+
+.card {
+  display: flex;
+  gap: 20px;
+}
+
+.card-item {
+  flex: 1;
+  background: #faefe3;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 15%;
+  max-height: 15%;
+}
+
+.card-item .icon {
+  width: 32px;
+}
+
+.sub-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.sub-lorem {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+@media (min-width: 1440px) {
+  .title {
+    font-size: 7rem;
+  }
+
+  .lorem {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 16px 36px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .big-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .background {
+    height: 100%;
+  }
+
+  .shape,
+  .muneco {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    left: 1%;
+  }
+
+  .shape {
+    width: 35%;
+    height: 25%;
+    margin: auto;
+  }
+
+  .muneco {
+    margin-top: -45%;
+    width: 40%;
+    height: auto;
+  }
+
+  .circle {
+    position: relative;
+    display: block;
+    margin: 80px 0 0 0;
+    width: 18%;
+    top: 0;
+    left: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 5;
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .first-row {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .lorem {
+    font-size: 1.2rem;
+    max-width: 90%;
+    margin: 0 auto 20px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .second-row {
+    margin-top: 60px;
+  }
+
+  .card {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card-item {
+    flex: 0 1 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .lorem {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-item {
+    max-width: 90%;
+    align-items: center;
+  }
+
+  .sub-title {
+    font-size: 1rem;
+  }
+
+  .sub-lorem {
+    font-size: 0.8rem;
+  }
+
+  .circle {
+    width: 20%;
+    margin: 40px auto 0;
+  }
+}
