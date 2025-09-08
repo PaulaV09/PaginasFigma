@@ -27,7 +27,7 @@ Cada tarjeta te lleva a un **layout diferente**:
 │   ├── index.css       # Estilos globales de la galería
 │   ├── layoutX.css     # Estilos específicos de cada layout
 │
-├── images/             # Recursos gráficos (si aplica)
+├── images/             # Recursos gráficos
 │
 ├── pages/              # Layouts individuales
 │   ├── layout1.html
@@ -51,13 +51,13 @@ Cada tarjeta te lleva a un **layout diferente**:
 
 
 ## 📱 Responsividad
-	•	Todos los layouts están pensados para desktop, tablet y móvil.
-	•	Se utilizan media queries para mantener la coherencia visual en diferentes tamaños de pantalla.
-	•	Algunos layouts incluyen elementos de grid y flexbox para mejorar la adaptabilidad.
+•	Todos los layouts están pensados para desktop, tablet y móvil.
+•	Se utilizan media queries para mantener la coherencia visual en diferentes tamaños de pantalla.
+•	Algunos layouts incluyen elementos de grid y flexbox para mejorar la adaptabilidad.
 
 
 ## 🛠️ Tecnologías utilizadas
 
-    HTML5
-	CSS3 (Flexbox, Grid, Media Queries)
-	Google Fonts (Poppins, Inter, etc.)
+HTML5
+CSS3 (Flexbox, Grid, Media Queries)
+Google Fonts (Poppins, Inter, etc.)
