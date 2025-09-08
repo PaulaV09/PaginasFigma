@@ -42,10 +42,10 @@ Cada tarjeta te lleva a un **layout diferente**:
 ## ⚙️ Instalación y uso
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tuusuario/galeria-layouts.git
+   git clone https://github.com/PaulaV09/PaginasFigma
 
 2.	Entra en la carpeta del proyecto:
-    cd galeria-layouts
+    cd paginasFigma
 
 3.	Abre el archivo index.html en tu navegador.
 
@@ -58,6 +58,6 @@ Cada tarjeta te lleva a un **layout diferente**:
 
 ## 🛠️ Tecnologías utilizadas
 
-HTML5
-CSS3 (Flexbox, Grid, Media Queries)
-Google Fonts (Poppins, Inter, etc.)
+- HTML5
+- CSS3 (Flexbox, Grid, Media Queries)
+- Google Fonts (Poppins, Inter, etc.)
