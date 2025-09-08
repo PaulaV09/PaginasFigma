@@ -103,3 +103,55 @@
     line-height: 1.4;
     opacity: 80%;
 }
+
+
+@media (max-width: 1024px) {
+  .content h1 {
+    font-size: 48px;
+  }
+  .photo {
+    height: 500px;
+    width: 360px;
+  }
+  .photo1,
+  .photo2 {
+    width: 240px;
+    height: 300px;
+  }
+  .photo2 {
+    top: 140px;
+    left: 120px;
+  }
+  .card h2 {
+    font-size: 24px;
+  }
+  .card p {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 768px) {
+    .photo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      position: relative; 
+    }
+  
+    .photo1,
+    .photo2 {
+      position: static; 
+      margin: 10px 0;
+      width: 80%;
+      height: auto;
+    }
+  }
+  @media (max-width: 480px) {
+    .photo2 {
+      top: 20px;
+      left: 20px;
+    }
+  }
+  

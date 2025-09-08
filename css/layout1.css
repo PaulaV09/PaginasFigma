@@ -71,3 +71,28 @@
     border-radius: 16px;
     
 }
+@media (max-width: 1024px) {
+    .fotos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-rows: auto auto;
+    }
+
+    .texto h1 {
+        font-size: 48px;
+    }
+
+    .texto p {
+        font-size: 20px;
+    }
+
+    .fotos {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+}
